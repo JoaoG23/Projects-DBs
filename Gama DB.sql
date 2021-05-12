@@ -49,15 +49,10 @@ add foreign key (`categoria`)
 references `categoria_prod` (`id_cat`);
 
 insert into estoque_produto values
-(default,'2 Juntas Tomada 10A 2x4 C/Placa',1000,6.50,0.02,'1'),
-(default,'2 Lâmpada Bulbo LED 12w 6000k',550,8.50,0.03,'2');
+(default,'6 Tomada 10A 4x4 C/Placa',1000,15.50,0.02,'1');
 
 select * from estoque_produto as es join
 categoria_prod as c
 on c.id_cat = es.categoria;
 
 
-update estoque_produto
-set nome_prod = 'Lâmpada Bulbo LED 12w 6000K'
-where cod_prod = '4'
-limit 1;   
